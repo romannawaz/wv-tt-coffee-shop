@@ -1,0 +1,39 @@
+<app-about></app-about>
+
+<div class="filter">
+    <div class="search">
+        <label for="search">Lookiing for</label>
+        <input type="text" placeholder="start typing here..." [(ngModel)]="query" name="query">
+    </div>
+    <div class="providers" *ngIf="countryProviders.size > 0">
+        <span>Or filter</span>
+
+        <div class="providers_buttons">
+            <ng-container *ngFor="let provider of countryProviders">
+                <button type="button" class="provider_button" (click)="filter(provider)">
+                    {{ provider }}
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<div class="products_list" *ngIf="products.length > 0; else elseTemplate">
+    <div *ngFor="let product of products | search: query">
+        <a [routerLink]="[ product.id ]" class="product">
+            <img class="product_img" [src]="product.imgUrl">
+
+            <div class="product_content">
+                <p class="product_title">{{ product.title }}</p>
+                <p class="product_country">{{ product.country }}</p>
+                <p class="product_price">{{ product.price }}$</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<ng-template #elseTemplate>
+    <div class="loader">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>

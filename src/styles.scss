@@ -1,1 +1,161 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-bottom: 150px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container-sm {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.hero {
+  height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+}
+
+.hero_title {
+  font-family: "Merienda Bold", sans-serif;
+  font-size: 40px;
+}
+
+.text-shadow {
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.svg-shadow {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.beans_logo {
+  width: 200px;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: 2px;
+    width: 60px;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  &::before {
+    left: 0;
+  }
+}
+
+.beans_logo-black {
+  &::after,
+  &::before {
+    background-color: #000;
+  }
+}
+
+.beans_logo-white {
+  &::after,
+  &::before {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+  }
+}
+
+.about {
+  margin-top: 70px;
+  padding-bottom: 60px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Merienda Bold", sans-serif;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+
+    width: 240px;
+    height: 1px;
+
+    background-color: #000;
+  }
+}
+
+.about_img {
+  width: 45%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: 272px;
+    height: 355px;
+
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.about_content {
+  width: 45%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .beans_logo {
+    margin-top: 20px;
+  }
+}
+
+.about_title {
+  font-size: 24px;
+}
+
+.about_description {
+  margin-top: 25px;
+  font-size: 14px;
+}

@@ -1,0 +1,27 @@
+<div class="our_best-wrapper">
+    <div class="container-sm">
+        <div class="our_best">
+            <div class="our_best_heading">
+                Our best
+            </div>
+
+            <div class="our_best_products">
+                <div *ngFor="let product of products">
+                    <a [routerLink]="[ '/our-coffee/' + product.id ]" class="product">
+                        <div class="product_img">
+                            <img [src]="product.imgUrl" class="img">
+                        </div>
+                        <div class="product_content">
+                            <p class="product_title">
+                                {{ product. title}}
+                            </p>
+                            <p class="product_price">
+                                {{ product.price }}$
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

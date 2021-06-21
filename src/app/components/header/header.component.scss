@@ -1,0 +1,28 @@
+header {
+  width: 1142px;
+  margin: 0 auto;
+
+  position: absolute;
+  left: 0;
+  top: 30px;
+  right: 0;
+}
+
+ul {
+  list-style-type: none;
+
+  font-family: "Merienda Regular", sans-serif;
+  font-size: 12px;
+
+  li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+}

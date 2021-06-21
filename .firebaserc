@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "coffee-shop-c25ca": {
+      "hosting": {
+        "coffe-shop-practice": [
+          "coffee-shop-c25ca"
+        ]
+      }
+    }
+  }
+}
